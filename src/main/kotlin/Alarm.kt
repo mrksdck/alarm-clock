@@ -7,10 +7,13 @@ It sufficiently covers the requirement that it should ring at six o'clock
 
 class Alarm {
 
-    fun ring(){
-        val time = LocalTime.now()
+    fun ring(time: LocalTime) {
         if(time.equals(LocalTime.of(6,0))){
-            print("It is 6:00 o'clock")
+            printRing()
         }
+    }
+
+    fun printRing() {
+        print("It is 6:00 o'clock")
     }
 }
