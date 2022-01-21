@@ -5,7 +5,7 @@ This is a code example of an alarm clock
 It sufficiently covers the requirement that it should ring at six o'clock
  */
 
-class alarm {
+class Alarm {
 
     fun ring(){
         val time = LocalTime.now()
