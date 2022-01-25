@@ -9,11 +9,11 @@ class Alarm {
 
     fun ring(time: LocalTime) {
         if(time.equals(LocalTime.of(6,0))){
-            printRing()
+            printRing("It is 6:00 o'clock")
         }
     }
 
-    fun printRing() {
-        print("It is 6:00 o'clock")
+    fun printRing(s: String) {
+        print(s)
     }
 }

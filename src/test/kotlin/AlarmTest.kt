@@ -1,5 +1,4 @@
 import io.kotest.core.spec.style.FunSpec
-import io.kotest.matchers.ints.exactly
 import io.mockk.confirmVerified
 import io.mockk.spyk
 import io.mockk.verify
@@ -12,9 +11,9 @@ class AlarmTest : FunSpec(){
             alarm.ring(LocalTime.of(6,0))
 
             verify { alarm.ring(LocalTime.of(6,0)) }
-            verify {  alarm.printRing()}
+            verify { alarm.printRing("It is 6:00 o'clock") }
 
-            confirmVerified(alarm.printRing())
+            confirmVerified(alarm.printRing("It is 6:00 o'clock"))
         }
     }
 }
